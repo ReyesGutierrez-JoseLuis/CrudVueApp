@@ -8,9 +8,7 @@
       </div>
       <div class="right flex">
         <div @click="toggleFilterMenu" class="filter flex">
-          <span
-            >Filter by status <span v-if="filteredInvoice">: {{ filteredInvoice }}</span></span
-          >
+          <span>Filter by status <span v-if="filteredInvoice">: {{ filteredInvoice }}</span></span>
           <img src="@/assets/icon-arrow-down.svg" alt="" />
           <ul v-show="filterMenu" class="filter-menu">
             <li @click="filteredInvoices">Draft</li>
@@ -31,11 +29,13 @@
     <div v-if="invoiceData.length > 0">
       <Invoice v-for="(invoice, index) in filteredData" :invoice="invoice" :key="index" />
     </div>
+
     <div v-else class="empty flex flex-column">
       <img src="@/assets/illustration-empty.svg" alt="" />
       <h3>There is nothing here</h3>
       <p>Create a new invoice by clicking the New Invoice button and get started</p>
     </div>
+
   </div>
 </template>
 
@@ -111,7 +111,6 @@ export default {
       .button,
       .filter {
         align-items: center;
-
         span {
           font-size: 12px;
         }
