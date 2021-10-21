@@ -1,4 +1,4 @@
-# invoice
+# Crud Vue App With Firebase
 
 ## Project setup
 ```
